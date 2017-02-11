@@ -1,0 +1,6 @@
+assemble:
+  version: 0
+
+block:
+  build: .
+  command: bundle exec ruby script.rb
