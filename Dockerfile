@@ -1,7 +1,7 @@
 FROM ruby:latest
 
-ADD Gemfile Gemfile.lock /assemble/
-WORKDIR /assemble
+ADD Gemfile Gemfile.lock /block/
+WORKDIR /block
 RUN bundle install
 
-ADD . /assemble/
+ADD . /block/

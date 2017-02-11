@@ -6,7 +6,13 @@ class Assemble
       new(:block_name, :input).
       new(
         ENV.fetch("ASSEMBLE_BLOCK_NAME"),
-        JSON.parse(File.read("input.json")),
+        JSON.parse(File.read(File.join(assemble_dir, "input.json"))),
       )
+  end
+
+  private
+
+  def assemble_dir
+    ENV.fetch("ASSEMBLE_DIR", "/.assemble")
   end
 end

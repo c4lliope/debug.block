@@ -4,3 +4,4 @@ assemble:
 block:
   build: .
   command: bundle exec ruby script.rb
+  workdir: /block
